@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <script src="evento.js" defer></script>
+  <script src="localStore.js" defer></script>
+</head>
+
+<body>
+  <section>
+    <form id="name-form">
+      <h2>Faça o Login para Continuar:</h2>
+      <label for="name">Nome:</label>
+      <input type="text" id="name" name="name" placeholder="Digite sua usuário" required>
+      <label for="senha">Senha:</label>
+      <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+      <input type="submit" value="Enviar">
+    </form>
+    <div id="welcome">
+      <h2>Seja Bem-Vindo <span id="userName"></span>, sua lista telefonica (<span id="numContatos"></span>)</h2>
+      <div>
+        <div>
+          <hr>
+          <input placeholder="Buscar Contato" type="text" /> <button>Buscar</button> <button onclick="addContato()">
+            Novo Contato
+          </button>
+          <hr>
+          <div id="tarefas">
+            <ul>
+              <li>Jota fenix - 23
+                <button onclick="deletar('identificador')">Deletar</button>
+                <button onclick="atualizar('identificador')">Atualizar </button>
+              </li>
+            </ul>
+          </div>
+          <hr>
+        </div>
+      </div>
+      <button id="logout">Sair</button>
+    </div>
+  </section>
+</body>
+
+</html>
